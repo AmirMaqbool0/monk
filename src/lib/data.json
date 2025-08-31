@@ -1,0 +1,43 @@
+{
+  "home": {
+    "hero": {
+      "title": "Welcome to Our Website",
+      "subtitle": "We deliver excellence in every project",
+      "ctaText": "Get Started",
+      "ctaLink": "/contact",
+      "image": "/images/hero-banner.jpg"
+    },
+    "empower": [
+      {
+        "title": "Startups",
+        "description": "“From MVP to launch-ready platforms — we bring your vision to life, fast and lean.”",
+        "icon": "/images/Home/empower/startup.svg"
+      },
+      {
+        "title": "Enterprises",
+        "description": "“Streamline processes, integrate AI, and scale seamlessly.”",
+        "icon": "/images/Home/empower/enterprise.svg"
+      },
+      {
+        "title": "SaaS Founders",
+        "description": "“End-to-end SaaS development with AI workflows and killer UX.”",
+        "icon": "/images/Home/empower/sas.svg"
+      },
+      {
+        "title": "Agencies & Partners",
+        "description": "“White-label solutions and partnerships that drive growth.”",
+        "icon": "/images/Home/empower/partner.svg"
+      },
+      {
+        "title": "Coaches & Creators",
+        "description": "“Apps, funnels, and digital ecosystems to grow your audience and revenue.”",
+        "icon": "/images/Home/empower/creator.svg"
+      },
+      {
+        "title": "D2C & Ecommerce",
+        "description": "“Custom storefronts and automated backends for seamless customer journeys.”",
+        "icon": "/images/Home/empower/ecom.svg"
+      }
+    ]
+  }
+}
