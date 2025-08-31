@@ -2,12 +2,15 @@
   "name": "my-project",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+"scripts": {
+  "prebuild": "npx depcheck || exit 0",
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
+}
+,
+
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@radix-ui/react-avatar": "^1.1.10",
@@ -23,6 +26,7 @@
     "react-fast-marquee": "^1.6.5",
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.16.0",
+    "recharts": "^3.1.2",
     "swiper": "^11.2.10",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7"
