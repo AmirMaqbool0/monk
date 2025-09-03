@@ -10,14 +10,14 @@ const CoreServices = () => {
     <div className="w-full h-fit bg-[#FDFDFD] flex flex-col gap-7 py-12 px-4 sm:px-6 md:py-24 md:px-8 lg:py-36 lg:px-24">
       {/* -----------------Header------------------ */}
       <div className="flex flex-col gap-4 md:gap-2 items-center justify-center text-center">
-        <span className="text-[16px] md:text-[18px] text-secondary font-[600]">
+        <span className="text-[16px] md:text-[18px] text-secondary font-[00]">
           Our Core Services
         </span>
         <h2 className="font-[600] text-[#070227] text-[24px] md:text-[30px] lg:text-[35px] max-w-2xl leading-tight">
           What We Build. How You Scale Smarter To Lead{" "}
           <span className="relative inline-block">
             The Next Digital
-            <span className="absolute left-0 -bottom-1 md:-bottom-2">
+            <span className="absolute left-0 -bottom-1 md:-bottom-5">
               <AnimatedUnderline
                 color="#412BE0"
                 width={200}
@@ -39,7 +39,7 @@ const CoreServices = () => {
 
       <div className="w-full h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
         {/* --------------------------AI-------------------- */}
-        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_20px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
+        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_40px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
           {/* Image Section */}
           <div className="relative w-full flex items-end justify-center bg-gray h-[200px] sm:h-[220px] md:h-[240px] group-hover:h-[200px] md:group-hover:h-[220px] transition-all duration-500">
             {/* Circular Glow */}
@@ -72,7 +72,7 @@ const CoreServices = () => {
 
         {/* -----------------------------SAS Software ---------------------- */}
 
-        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_20px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
+        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_40px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
           {/* Image Section with Glow */}
           <div className="relative w-full h-[200px] sm:h-[220px] md:h-[240px] overflow-hidden bg-gray-100">
             {/* Glow Effects */}
@@ -135,7 +135,7 @@ const CoreServices = () => {
 
         {/*------------------------------ website Development---------------------------  */}
 
-        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_20px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
+        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_40px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
           {/* Image Section */}
           <div className="relative w-full h-[200px] sm:h-[220px] md:h-[240px] flex overflow-hidden bg-gray">
             {/* Orange Glow */}
@@ -178,7 +178,7 @@ const CoreServices = () => {
         </div>
 
         {/* -------------------------------------Mobile App ---------------- */}
-        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_20px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
+        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_40px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
           {/* Image Section */}
           <div className="relative w-full h-[200px] sm:h-[220px] md:h-[240px] overflow-hidden bg-gray-100 flex justify-center items-center gap-1 md:gap-2">
             {/* Glow Effect */}
@@ -236,7 +236,7 @@ const CoreServices = () => {
 
         {/* --------------------------------  UI / UX ---------------------- */}
 
-        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_20px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
+        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_40px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
           {/* Image Section */}
           <div className="relative w-full h-[200px] sm:h-[220px] md:h-[240px] flex items-center justify-center overflow-hidden bg-gray-100">
             {/* Orange Glow */}
@@ -269,7 +269,7 @@ const CoreServices = () => {
           </div>
         </div>
         {/* ------------------------SEO---------------------------- */}
-        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_20px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
+        <div className="flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_40px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500 w-full h-[320px] sm:h-[350px] md:h-[350px]">
           {/* Visual Section */}
           <div className="relative w-full h-[200px] sm:h-[220px] md:h-[240px] flex items-center justify-center overflow-hidden bg-gray-100">
             {/* Bottom Glow */}

@@ -28,3 +28,268 @@
 
 
 
+
+.glass {
+  @apply bg-white/80 backdrop-blur-xl border border-white/40 shadow-glass;
+}
+
+.card {
+  @apply rounded-2xl bg-white/85 border border-black/5 shadow-soft;
+}
+
+.card-muted {
+  @apply rounded-2xl bg-slate-50/70 border border-black/5 shadow-soft;
+}
+
+.kpi-number {
+  @apply text-2xl font-semibold tracking-tight text-slate-900;
+}
+
+.kpi-label {
+  @apply text-sm text-slate-500;
+}
+
+.badge {
+  @apply inline-flex items-center gap-1 rounded-full bg-slate-100 text-slate-700 px-2.5 py-1 text-xs font-medium;
+}
+
+.input {
+  @apply rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/50;
+}
+
+/* Simple ring progress using a conic gradient + inner cutout */
+.ring-gauge {
+  position: relative;
+  border-radius: 9999px;
+}
+.ring-gauge > .inner {
+  position: absolute;
+  inset: 8px;
+  border-radius: 9999px;
+  background: white;
+}
+
+
+/* White shell (outer frame) */
+.shell {
+  @apply bg-white rounded-[28px] border border-slate-200/70 shadow-[0_18px_50px_rgba(2,6,23,0.12)];
+}
+
+/* Cards (inner blocks) */
+.card {
+  @apply rounded-2xl bg-white border border-slate-200/70 shadow-[0_8px_20px_rgba(2,6,23,0.06)];
+}
+
+.card-muted { @apply rounded-2xl bg-slate-50 border border-slate-200/60 shadow-none; }
+
+.badge { @apply inline-flex items-center gap-1 rounded-full bg-slate-100 text-slate-700 px-2.5 py-1 text-xs font-medium; }
+.input { @apply rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/40; }
+.kpi-number { @apply text-2xl font-semibold tracking-tight text-slate-900; }
+.kpi-label { @apply text-sm text-slate-500; }
+
+/* ring gauge */
+.ring-gauge { position: relative; border-radius: 9999px; }
+.ring-gauge > .inner { position: absolute; inset: 8px; border-radius: 9999px; background: white; }
+
+
+
+.card {
+    @apply rounded-2xl border border-slate-100 bg-white/90 shadow-[0_1px_2px_rgba(16,24,40,0.06),0_10px_20px_-10px_rgba(16,24,40,0.15)];
+    background-image:
+      radial-gradient(120px 80px at -20% -20%, rgba(99,102,241,0.06), transparent 60%),
+      radial-gradient(120px 80px at 120% 120%, rgba(56,189,248,0.06), transparent 60%);
+    backdrop-filter: saturate(1.2);
+  }
+
+  /* Nice spinner ring (used for App Store Status) */
+  .spinner-ring {
+    @apply relative rounded-full;
+  }
+  .spinner-ring::before {
+    content: "";
+    @apply absolute inset-0 rounded-full;
+    /* Track */
+    box-shadow: inset 0 0 0 6px #e5e7eb;
+  }
+  .spinner-ring::after {
+    content: "";
+    @apply absolute inset-0 rounded-full animate-spin;
+    /* Gradient wedge */
+    background:
+      conic-gradient(from 0deg, rgba(139,92,246,0) 0 80%, #8b5cf6 0 90%, #38bdf8 0 100%);
+    /* Make it a ring */
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 6px), #000 0);
+            mask: radial-gradient(farthest-side, transparent calc(100% - 6px), #000 0);
+    animation-duration: 1.4s;
+  }
+
+
+   /* Surface used only in the Right Rail */
+  .rail-card {
+    @apply rounded-[20px] border border-slate-100 bg-white/95 p-4 shadow-[0_1px_2px_rgba(16,24,40,0.06),0_18px_40px_-18px_rgba(99,102,241,0.35)];
+    background-image:
+      radial-gradient(160px 120px at -10% -10%, rgba(99,102,241,0.06), transparent 60%),
+      radial-gradient(160px 120px at 110% 120%, rgba(90,230,255,0.06), transparent 60%);
+    backdrop-filter: saturate(1.1);
+  }
+
+  .rail-title {
+    @apply text-[12px] leading-none text-slate-500;
+  }
+  .rail-subtitle {
+    @apply text-[11px] leading-none text-slate-400;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #1F6FFF 0%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border border-slate-200 bg-white/90 px-2 py-[2px] text-[11px] text-slate-600 shadow-sm;
+    backdrop-filter: blur(2px);
+  }
+  .chip-dot {
+    @apply inline-block size-1.5 rounded-full;
+  }
+
+  .count-pill {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-2 py-1 text-xs text-slate-700;
+  }
+  .count-pill b {
+    @apply text-slate-900;
+  }
+
+  .progress-track {
+    @apply relative h-2 rounded-full bg-slate-100 overflow-hidden;
+  }
+  .progress-bar {
+    background: linear-gradient(90deg, #5AE6FF 0%, #8B5CF6 100%);
+    @apply h-full rounded-full transition-all;
+  }
+  .progress-dot {
+    @apply absolute top-1/2 -translate-y-1/2 size-3 rounded-full border border-white;
+    background: linear-gradient(90deg, #5AE6FF 0%, #8B5CF6 100%);
+    box-shadow: 0 2px 8px rgba(99,102,241,0.35);
+  }
+
+  .seg {
+    @apply inline-flex items-center rounded-full bg-slate-100 p-0.5;
+  }
+  .seg-btn {
+    @apply rounded-full px-2 py-1 text-[11px] text-slate-600 transition-colors;
+  }
+  .seg-btn[data-active="true"] {
+    @apply bg-white text-slate-900 shadow-sm;
+  }
+
+  .input {
+    @apply h-8 w-full rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-700 placeholder-slate-400;
+  }
+
+  .suffix-tag {
+    @apply pointer-events-none absolute right-1.5 top-1/2 -translate-y-1/2 rounded-full bg-slate-100 px-2 py-0.5 text-[10px] text-slate-600;
+  }
+
+  .btn-gradient {
+    background: linear-gradient(90deg, #5AE6FF 0%, #8B5CF6 100%);
+    @apply relative w-full rounded-xl py-2.5 text-sm font-semibold text-white shadow-[0_8px_20px_-8px_rgba(99,102,241,0.6)];
+  }
+
+  .avatar-wrap {
+    @apply relative size-9 rounded-full bg-gradient-to-br from-sky-100 to-indigo-100 grid place-content-center;
+  }
+  .avatar {
+    @apply relative size-8 rounded-full overflow-hidden ring-2 ring-white;
+  }
+
+  .divider {
+    @apply my-2 h-px bg-slate-100;
+  }
+
+
+   /* Card table surface */
+  .table-surface {
+    @apply overflow-hidden rounded-2xl border border-slate-200 bg-white;
+  }
+  /* Hairline bottom on thead */
+  .thead-soft {
+    @apply bg-white;
+    box-shadow: inset 0 -1px 0 0 rgba(226,232,240,1);
+  }
+
+  .th {
+    @apply text-left font-medium;
+  }
+  .th-link {
+    @apply text-[13px] font-medium text-indigo-600;
+  }
+
+  .row {
+    @apply h-[48px] border-b last:border-b-0 border-slate-100;
+  }
+  .cell {
+    @apply px-4 text-[13px] text-slate-700;
+  }
+  .cell-right {
+    @apply px-4 text-[13px] text-slate-700 text-right;
+  }
+  .name-cell {
+    @apply flex items-center gap-2;
+  }
+
+  /* Tiny circular logos/dots */
+  .logo {
+    @apply grid size-5 place-content-center rounded-full border border-slate-200 ring-2 ring-white;
+  }
+
+  /* Legend dots (Manual / AI) */
+  .legend-dot {
+    @apply inline-block size-2.5 rounded-full align-middle;
+  }
+
+  /* Mode colors as links */
+  .link-manual { @apply text-indigo-600; }
+  .link-ai     { @apply text-emerald-600; }
+
+  .action-caret { @apply text-xs text-slate-500; }
+
+
+  .kpi-card {
+    @apply rounded-[20px] border border-slate-100 bg-white/95 px-5 py-4 h-[124px] flex items-center gap-4 min-w-0;
+    box-shadow:
+      0 1px 2px rgba(16,24,40,0.06),
+      0 18px 40px -18px rgba(99,102,241,0.35);
+    background-image:
+      radial-gradient(160px 120px at -10% -10%, rgba(99,102,241,0.06), transparent 60%),
+      radial-gradient(160px 120px at 110% 120%, rgba(90,230,255,0.06), transparent 60%);
+    backdrop-filter: saturate(1.1);
+  }
+
+  .kpi-label { @apply text-[12px] leading-none text-slate-600; }
+  .kpi-hint  { @apply text-[12px] leading-none text-slate-400 mt-1; }
+
+  .kpi-value {
+    font-size: clamp(18px, 2.2vw, 22px);
+    line-height: 1.1;
+    font-weight: 700;
+    background: linear-gradient(90deg, #1F6FFF 0%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .kpi-orb {
+    @apply relative grid place-content-center rounded-full border border-slate-200 shadow-sm;
+    background: radial-gradient(120% 120% at 30% 20%, #f0f7ff 0%, #eef2ff 50%, #ffffff 100%);
+  }
+  .kpi-orb::after {
+    content: "";
+    @apply absolute inset-0 rounded-full;
+    background: conic-gradient(from 220deg, rgba(139,92,246,0.2), rgba(56,189,248,0.2), transparent 60%);
+    mix-blend-mode: normal;
+  }
+
+  .kpi-grid { @apply grid grid-cols-1 md:grid-cols-3 gap-4; } /* responsive layout */

@@ -102,7 +102,7 @@ export default function CaseStudies() {
             <span className="hidden sm:block" />
             <span className="relative inline-block">
               Real Impact.
-              <span className="absolute left-0 -bottom-1 sm:-bottom-2 origin-left scale-75 sm:scale-90 md:scale-100">
+              <span className="absolute left-0 -bottom-1 sm:-bottom-4 origin-left scale-75 sm:scale-90 md:scale-100">
                 <AnimatedUnderline width={220} height={20} color="#412BE0" />
               </span>
             </span>
@@ -131,7 +131,7 @@ export default function CaseStudies() {
             onClick={prev}
             className="
               absolute top-1/2 -translate-y-1/2 z-20 
-              bg-white shadow-md rounded-full p-2 sm:p-3 hover:bg-gray-100 transition
+              bg-white shadow-[0px_4px_40px_4px_#412BE012] rounded-full p-2 sm:p-3 hover:bg-gray-100 transition
               left-2 xs:-left-6 sm:-left-8 md:-left-10 lg:-left-12
             "
             aria-label="Previous case study"
@@ -159,7 +159,7 @@ export default function CaseStudies() {
                   x: { type: "spring", stiffness: 300, damping: 30 },
                   opacity: { duration: 0.2 },
                 }}
-                className="bg-white rounded-xl sm:rounded-2xl shadow-[0px_4px_12px_rgba(0,0,0,0.2)] 
+                className="bg-white rounded-xl sm:rounded-2xl shadow-[0px_4px_40px_4px_#412BE012] 
                            flex flex-col lg:flex-row items-stretch lg:items-center gap-4 sm:gap-2 lg:gap-8 p-2 sm:p-5 lg:p-2 w-full"
               >
                 {/* Image */}
@@ -225,7 +225,7 @@ export default function CaseStudies() {
             onClick={next}
             className="
               absolute top-1/2 -translate-y-1/2 z-20 
-              bg-white shadow-md rounded-full p-2 sm:p-3 hover:bg-gray-100 transition
+              bg-white shadow-[0px_4px_40px_4px_#412BE012] rounded-full p-2 sm:p-3 hover:bg-gray-100 transition
               right-2 xs:-right-6 sm:-right-8 md:-right-10 lg:-right-12
             "
             aria-label="Next case study"

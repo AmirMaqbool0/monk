@@ -173,7 +173,7 @@ const WhyMonkmaze = () => {
           <button className="py-2.5 px-6 bg-secondary text-white rounded-[37px] hover:bg-secondary/80 transition-colors text-sm md:text-[16px]">
             Request Your Strategy Call
           </button>
-          <button className="py-2.5 px-6 rounded-[37px] hover:bg-white/20 transition-colors text-sm md:text-[16px] border-2 border-black font-[500]">
+          <button className="py-2 px-6 rounded-[37px] hover:bg-white/20 transition-colors text-sm md:text-[16px] border-2 border-black font-[500]">
             View Our Work
           </button>
         </div>

@@ -48,7 +48,7 @@ export default function Home() {
             We Empower to Lead, Innovate, and Grow{" "}
             <span className="relative inline-block">
               Without
-              <span className="absolute left-0 -bottom-1 md:-bottom-2">
+              <span className="absolute left-0 -bottom-1 md:-bottom-5">
                 <AnimatedUnderline
                   width={100}
                   height={16}
@@ -71,7 +71,7 @@ export default function Home() {
           {Data?.home?.empower?.map((item, index) => (
             <div
               className="w-full h-[180px] sm:h-[200px] md:h-[200px] flex flex-col gap-2 md:gap-3 items-center justify-center p-4 md:p-5 rounded-[10px] md:rounded-[13px] bg-white 
-        hover:shadow-[0px_4px_15px_rgba(0,0,0,0.15)] transition-all duration-300 ease-in-out"
+        hover:shadow-[0px_4px_40px_4px_#412BE012] transition-all duration-300 ease-in-out"
               key={index}
             >
               <div className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] rounded-[5px] bg-[#EAF5FD] flex items-center justify-center">

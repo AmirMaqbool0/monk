@@ -25,10 +25,10 @@ const ClientFavorite = () => {
           Smart Growth Packages Built to Launch, Scale, & Win in{" "}
           <span className="relative inline-block">
             Competitive Markets
-            <span className="absolute left-0 -bottom-1 md:-bottom-2">
+            <span className="absolute left-0 -bottom-1 md:-bottom-4">
               <AnimatedUnderline
                 color="#412BE0"
-                width={220}
+                width={280}
                 height={16}
                 className="md:!w-[420px] md:!h-[20px]"
               />
@@ -45,45 +45,45 @@ const ClientFavorite = () => {
       {/* Cards: grid on <lg (same pattern as CoreServices), original flex layout preserved on lg */}
       <div className="w-full h-fit grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 lg:grid-cols-none lg:flex lg:items-stretch lg:justify-between">
         {/* Card 1 */}
-     <div className="w-full lg:w-[330px] h-[320px] sm:h-[350px] md:h-[350px] lg:h-[350px] flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_40px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500">
-  {/* Image Section */}
-  <div className="relative w-full h-[200px] sm:h-[220px] md:h-[240px] lg:h-[270px] flex items-end justify-center gap-0 overflow-hidden bg-gray-100">
-    {/* Glow Effects */}
-    <div className="pointer-events-none absolute w-32 h-32 md:w-40 md:h-40 bg-secondary/40 blur-2xl md:blur-3xl rounded-full top-[-30px] md:top-[-40px] left-[-30px] md:left-[-40px] transition-all duration-700 ease-in-out group-hover:top-[calc(100%-120px)] md:group-hover:top-[calc(100%-160px)] z-0" />
-    <div className="pointer-events-none absolute w-32 h-32 md:w-40 md:h-40 bg-secondary/40 blur-2xl md:blur-3xl rounded-full bottom-[-30px] md:bottom-[-40px] right-[-30px] md:right-[-40px] transition-all duration-700 ease-in-out group-hover:bottom-[calc(100%-120px)] md:group-hover:bottom-[calc(100%-160px)] z-0" />
+        <div className="w-full lg:w-[330px] h-[320px] sm:h-[350px] md:h-[350px] lg:h-[350px] flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_40px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500">
+          {/* Image Section */}
+          <div className="relative w-full h-[200px] sm:h-[220px] md:h-[240px] lg:h-[270px] flex items-end justify-center gap-0 overflow-hidden bg-gray-100">
+            {/* Glow Effects */}
+            <div className="pointer-events-none absolute w-32 h-32 md:w-40 md:h-40 bg-secondary/40 blur-2xl md:blur-3xl rounded-full top-[-30px] md:top-[-40px] left-[-30px] md:left-[-40px] transition-all duration-700 ease-in-out group-hover:top-[calc(100%-120px)] md:group-hover:top-[calc(100%-160px)] z-0" />
+            <div className="pointer-events-none absolute w-32 h-32 md:w-40 md:h-40 bg-secondary/40 blur-2xl md:blur-3xl rounded-full bottom-[-30px] md:bottom-[-40px] right-[-30px] md:right-[-40px] transition-all duration-700 ease-in-out group-hover:bottom-[calc(100%-120px)] md:group-hover:bottom-[calc(100%-160px)] z-0" />
 
-    <Image
-      src={images.ClientFavorite.Ecom_1}
-      alt="Left Image"
-      width={150}
-      height={250}
-      className="object-cover w-[72px] sm:w-[84px] md:w-[90px] h-auto z-20 transition-all duration-700 ease-in-out group-hover:translate-y-3 group-hover:-rotate-6 group-hover:mb-[-30px]"
-    />
-    <Image
-      src={images.ClientFavorite.Ecom_2}
-      alt="Right Image"
-      width={150}
-      height={250}
-      className="object-cover w-[82px] sm:w-[96px] md:w-[100px] h-auto z-10 transition-all duration-700 ease-in-out group-hover:translate-y-3 group-hover:rotate-6 group-hover:mb-[-30px]"
-    />
-  </div>
+            <Image
+              src={images.ClientFavorite.Ecom_1}
+              alt="Left Image"
+              width={150}
+              height={250}
+              className="object-cover w-[72px] sm:w-[84px] md:w-[90px] h-auto z-20 transition-all duration-700 ease-in-out group-hover:translate-y-3 group-hover:-rotate-6 group-hover:mb-[-30px]"
+            />
+            <Image
+              src={images.ClientFavorite.Ecom_2}
+              alt="Right Image"
+              width={150}
+              height={250}
+              className="object-cover w-[82px] sm:w-[96px] md:w-[100px] h-auto z-10 transition-all duration-700 ease-in-out group-hover:translate-y-3 group-hover:rotate-6 group-hover:mb-[-30px]"
+            />
+          </div>
 
-  {/* Text Section */}
-  <div className="flex flex-col gap-1 p-3 transition-all duration-500 h-[120px] group-hover:h-[150px] md:group-hover:h-[170px] overflow-hidden">
-    <h3 className="text-[16px] md:text-[18px] text-secondary font-[500]">
-      AI & Workflow Automation
-    </h3>
-    <p className="text-[#576172] font-[400] text-[12px] md:text-[14px] leading-tight">
-      Replace repetitive processes with intelligent systems that save time,
-      reduce error, and scale operations autonomously.
-    </p>
-    <div className="flex items-center cursor-pointer opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 mt-1">
-      <span className="text-[12px] md:text-[14px] text-secondary flex items-center gap-1">
-        Explore More <ArrowRight size={16} />
-      </span>
-    </div>
-  </div>
-</div>
+          {/* Text Section */}
+          <div className="flex flex-col gap-1 p-3 transition-all duration-500 h-[120px] group-hover:h-[150px] md:group-hover:h-[170px] overflow-hidden">
+            <h3 className="text-[16px] md:text-[18px] text-secondary font-[500]">
+              AI & Workflow Automation
+            </h3>
+            <p className="text-[#576172] font-[400] text-[12px] md:text-[14px] leading-tight">
+              Replace repetitive processes with intelligent systems that save
+              time, reduce error, and scale operations autonomously.
+            </p>
+            <div className="flex items-center cursor-pointer opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 mt-1">
+              <span className="text-[12px] md:text-[14px] text-secondary flex items-center gap-1">
+                Explore More <ArrowRight size={16} />
+              </span>
+            </div>
+          </div>
+        </div>
 
         {/* Card 2 */}
         <div className="w-full lg:w-[330px] h-[320px] sm:h-[350px] md:h-[350px] lg:h-[350px] flex flex-col border-[3px] md:border-[5px] border-white shadow-[0px_4px_40px_4px_#412BE012] rounded-[8px] md:rounded-[10px] bg-white group overflow-hidden transition-all duration-500">
@@ -172,7 +172,7 @@ const ClientFavorite = () => {
         <button className="py-2.5 px-6 bg-secondary cursor-pointer text-white rounded-[37px] hover:bg-secondary/80 transition-colors text-sm md:text-[16px] w-full sm:w-auto">
           Request Your Strategy Call
         </button>
-        <button className="py-2.5 px-6 cursor-pointer rounded-[37px] hover:bg-white/20 transition-colors text-sm md:text-[16px] border-2 border-black font-[500] w-full sm:w-auto">
+        <button className="py-2 px-6 cursor-pointer rounded-[37px] hover:bg-white/20 transition-colors text-sm md:text-[16px] border-2 border-black font-[500] w-full sm:w-auto">
           View Our Work
         </button>
       </div>

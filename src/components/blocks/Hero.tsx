@@ -3,6 +3,7 @@ import AnimatedUnderline from "../ui/AnimatedUnderline";
 import Image from "next/image";
 import images from "@/lib/images";
 import Marquee from "react-fast-marquee";
+import Dashboard from "./Dashboard";
 
 const Trusted_Logs = [
   images.trusted_logos.trusted_logo1,
@@ -55,18 +56,24 @@ const Hero = () => {
           <button className="w-full sm:w-auto py-2 px-6 bg-secondary cursor-pointer rounded-[37px] hover:bg-secondary/80 transition-colors text-[14px] sm:text-[14px] md:text-[14px]">
             Request Your Strategy Call
           </button>
-          <button className="w-full sm:w-auto py-2 px-6 cursor-pointer rounded-[37px] hover:bg-white/20 transition-colors border-white text-[14px] sm:text-[14px] md:text-[14px] border-2">
+          <button className="w-full sm:w-auto py-[6px] px-6 cursor-pointer rounded-[37px] hover:bg-white/20 transition-colors border-white text-[14px] sm:text-[14px] md:text-[14px] border-[2px]">
             View Our Work
           </button>
         </div>
+        <div className="w-[90%] p-[2px] bg-white/10 rounded-2xl border-[3px] border-[#797890] ">
+        <Dashboard />
+            </div>
       </div>
+        
+
 
       {/* -----------------------------------Trusted Clients----------------------------------- */}
       <div className="flex flex-col gap-4 sm:gap-6 items-center justify-center px-4 sm:px-0">
         <p className="text-white font-[400] text-[16px] sm:text-[18px] lg:max-w-3xl text-center">
           Trusted by 30+ industries worldwide
         </p>
-
+            
+          
         {/* -------------------------Company LOGO----------------- */}
         <div className="w-full flex items-center h-[70px] sm:h-[90px] relative overflow-hidden">
           <Marquee speed={40} play={play}>

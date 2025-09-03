@@ -33,6 +33,7 @@ const config: Config = {
           600: "#4f46e5",
           700: "#4338ca",
         },
+        
         step: {
           track: "#E5E7EB",          // gray-200
           dot: "#D1D5DB",            // gray-300
@@ -56,7 +57,13 @@ const config: Config = {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
       },
-      
+         boxShadow: {
+        soft: "0 10px 40px rgba(0,0,0,0.08)",
+        glass: "0 10px 60px rgba(24, 24, 46, 0.25)",
+      },
+      borderRadius: {
+        xl2: "1.25rem",
+      },
     },
   },
   plugins: [],

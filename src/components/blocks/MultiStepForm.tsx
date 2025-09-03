@@ -29,6 +29,7 @@ import {
   DocumentTextIcon,
 } from "@heroicons/react/24/outline";
 import { CheckIcon } from "@heroicons/react/24/solid";
+import PhoneField from "../ui/PhoneField";
 
 /* ---------------- Helpers ---------------- */
 function cn(...cls: Array<string | false | null | undefined>) {
@@ -704,7 +705,7 @@ export default function MultiStepForm() {
               onChange={setEmail}
               icon={<EnvelopeIcon className="h-5 w-5" />}
             />
-            <div className="relative">
+            {/* <div className="relative">
               <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-lg">🇮🇳</span>
               <input
                 name="phone"
@@ -715,7 +716,13 @@ export default function MultiStepForm() {
                 className="h-12 w-full rounded-[15px] border border-gray-200 bg-white pl-11 pr-4 text-sm text-gray-800 placeholder-gray-400 box-shadow: 0px 0px 40px -50px #412BE012;
  outline-none transition focus:border-indigo-300 focus:ring-2 focus:ring-indigo-100"
               />
-            </div>
+            </div> */}
+            <PhoneField
+        value={phone}
+        onChange={setPhone}
+        defaultCountry="IN"
+        placeholder="Phone Number (WhatsApp preferred)"
+      />
 
             <p className="pt-2 text-center text-xs text-gray-400">
               Your information is encrypted, secure, and never shared. Trusted by global founders and teams.

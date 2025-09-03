@@ -19,7 +19,7 @@ const roboto = Roboto({
 
 
 export const metadata: Metadata = {
-  title: "Your Client Website Title",
+  title: "MonkMaze",
   description: "Short description for SEO.",
 };
 
