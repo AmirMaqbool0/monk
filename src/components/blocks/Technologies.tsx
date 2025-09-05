@@ -147,7 +147,7 @@ export const Technologies: React.FC = () => {
           <span className="relative inline-block">
             Smartest Brands
             <span className="absolute left-0 -bottom-2 md:-bottom-2 lg:-bottom-5 origin-left max-[479px]:scale-[0.85] max-[375px]:scale-[0.75]">
-              <AnimatedUnderline width={290} height={20} color="#412BE0" />
+              <AnimatedUnderline width={290}  color="#412BE0" />
             </span>
           </span>{" "}
           on the Planet
