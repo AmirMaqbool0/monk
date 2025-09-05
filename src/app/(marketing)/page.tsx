@@ -49,12 +49,20 @@ export default function Home() {
             <span className="relative inline-block">
               Without
               <span className="absolute left-0 -bottom-1 md:-bottom-5">
+             
                 <AnimatedUnderline
-                  width={100}
-                  height={16}
+                  width={260}
                   color="#412BE0"
-                  className="md:!w-[140px] md:!h-[20px]"
+                  className="hidden md:block"
                 />
+                <AnimatedUnderline
+                  width={200}
+                  color="#412BE0"
+                  className="block md:hidden"
+                />
+
+                {/* OR Option 2: CSS-based scaling (recommended if responsive) */}
+                {/* <AnimatedUnderline className="w-[100px] md:w-[140px] h-auto" color="#412BE0" /> */}
               </span>
             </span>{" "}
             Limits

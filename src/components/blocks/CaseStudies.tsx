@@ -103,7 +103,7 @@ export default function CaseStudies() {
             <span className="relative inline-block">
               Real Impact.
               <span className="absolute left-0 -bottom-1 sm:-bottom-4 origin-left scale-75 sm:scale-90 md:scale-100">
-                <AnimatedUnderline width={220} height={20} color="#412BE0" />
+                <AnimatedUnderline width={220} color="#412BE0" />
               </span>
             </span>
           </h2>

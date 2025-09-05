@@ -21,9 +21,9 @@ export function Card({
 
       {(title || subtitle || action) && (
         <header className={cn(" flex items-center justify-between min-h-[44px] pb-1", headerClassName)}>
-          <div>
+          <div className="flex flex-col items-center " style={{ alignItems: 'flex-start' }}>
             {title && <h3 className="text-slate-900  text-[12px] font-semibold">{title}</h3>}
-            {subtitle && <p className="text-xs text-slate-500">{subtitle}</p>}
+            {subtitle && <p className="text-xs text-slate-500 text-start">{subtitle}</p>}
           </div>
           {action}
         </header>

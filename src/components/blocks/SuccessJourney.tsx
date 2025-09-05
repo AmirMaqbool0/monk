@@ -14,8 +14,10 @@ const SuccessJourney = () => {
           Let’s Build the Platform Your Competitors  <span> </span>
           <span className="relative inline-block">
             Wished for
-            <span className="absolute left-0 -bottom-1 md:-bottom-2">
-              <AnimatedUnderline color="#412BE0" width={200} height={16} className="md:!w-[200px] md:!h-[20px]" />
+            <span className="absolute left-0 -bottom-1 md:-bottom-[15px]">
+              <AnimatedUnderline    width={220}
+                  color="#412BE0"
+                  className="hidden md:block" />
             </span>
           </span>{" "}
        

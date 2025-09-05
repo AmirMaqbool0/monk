@@ -125,12 +125,11 @@ const ImpactStrip = () => {
           Trusted by Leaders. Proven by Outcomes.{" "}
           <span className="relative inline-block">
             Global by Nature.
-            <span className="absolute left-0 -bottom-1 md:-bottom-2">
+            <span className="absolute left-0 -bottom-1 md:-bottom-[30px]">
               <AnimatedUnderline
-                color="#412BE0"
-                width={200}
-                height={16}
-                className="md:!w-[300px] md:!h-[20px]"
+                  width={280}
+                  color="#412BE0"
+                  className="hidden md:block"
               />
             </span>
           </span>

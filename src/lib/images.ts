@@ -76,7 +76,11 @@ const images = {
   },
   impact:{
     background:'/images/Home/impact_background.png'
+  },
+  dashboard:{
+    total_Chart:'/images/Home/dashboard/total_chart.png',
   }
+
 };
 
 export default images;

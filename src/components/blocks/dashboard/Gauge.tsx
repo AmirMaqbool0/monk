@@ -5,11 +5,12 @@ import { cn } from "@/lib/cn";
 export function Gauge({
   value,
   size = 64,
-  stroke = 8,
-  from = "#8b5cf6",      // indigo-500
-  to = "#38bdf8",        // sky-400
-  track = "#e5e7eb",     // slate-200
-  center,                // optional text in the middle, e.g. "3d"
+  stroke = 6,
+  from = "#38bdf8",      // indigo-500
+  to = "#8b5cf6",        // sky-400
+  trackFrom = "#EBFAFE", // top of track
+  trackTo = "#ECECFC",   // bottom of track
+  center,               // optional text in the middle
   caption,
   className,
 }: {
@@ -18,7 +19,8 @@ export function Gauge({
   stroke?: number;
   from?: string;
   to?: string;
-  track?: string;
+  trackFrom?: string;
+  trackTo?: string;
   center?: string | number;
   caption?: string;
   className?: string;
@@ -34,9 +36,16 @@ export function Gauge({
     <div className={cn("flex flex-col items-center", className)}>
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
         <defs>
-          <linearGradient id={id} x1="0" y1="0" x2="1" y2="1">
+          {/* Gradient for arc */}
+          <linearGradient id={`${id}-arc`} x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor={from} />
             <stop offset="100%" stopColor={to} />
+          </linearGradient>
+
+          {/* Gradient for track */}
+          <linearGradient id={`${id}-track`} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor={trackFrom} />
+            <stop offset="100%" stopColor={trackTo} />
           </linearGradient>
         </defs>
 
@@ -45,16 +54,17 @@ export function Gauge({
           cx={size / 2}
           cy={size / 2}
           r={r}
-          stroke={track}
+          stroke={`url(#${id}-track)`}
           strokeWidth={stroke}
           fill="none"
         />
+
         {/* Arc */}
         <circle
           cx={size / 2}
           cy={size / 2}
           r={r}
-          stroke={`url(#${id})`}
+          stroke={`url(#${id}-arc)`}
           strokeWidth={stroke}
           strokeLinecap="round"
           strokeDasharray={`${dash} ${gap}`}
@@ -62,7 +72,7 @@ export function Gauge({
           fill="none"
         />
 
-        {/* Center text when provided */}
+        {/* Center text */}
         {center !== undefined && center !== null && (
           <text
             x="50%"

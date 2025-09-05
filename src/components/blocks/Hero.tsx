@@ -34,57 +34,54 @@ const Hero = () => {
     <div className="w-full h-fit bg-gradiant py-20 sm:py-28 md:py-36 flex flex-col justify-center gap-8 sm:gap-12">
       {/* ------------------------------Text Content------------------------ */}
       <div className="text-white flex flex-col gap-6 sm:gap-8 items-center justify-center text-center w-full px-4 sm:px-0">
-        <h1 className="font-semibold text-white text-[38px] leading-[1.2] max-w-[90%] sm:text-[40px] sm:max-w-[600px] md:text-[60px] md:max-w-3xl">
+        <h1 className="font-semibold text-white text-[38px] leading-[1.2] max-w-[90%] sm:text-[40px] sm:max-w-[600px] md:text-[60px] md:max-w-3xl 2xl:text-[90px] 2xl:max-w-[1350px]">
           Elite Systems. Engineered <span className="text-[#B3B3B3]">with</span>{" "}
           <span className="relative inline-block">
             <span className="relative z-10">AI Precision.</span>
-            <span className="absolute left-0 right-0 bottom-[-8px] sm:bottom-[-10px] z-0 flex justify-center pointer-events-none">
-              <AnimatedUnderline width={280} height={16} className="sm:!w-[380px] sm:!h-[20px]" />
+            <span className="absolute left-0 right-0 bottom-[-8px] sm:bottom-[-30px] z-0 flex justify-center pointer-events-none">
+              {/* Class controls size */}
+              <AnimatedUnderline className="w-[380px] h-auto 2xl:w-[550px]" />
             </span>
           </span>
         </h1>
 
-        <p className="text-white font-[400] text-[14px] max-w-[90%] sm:max-w-[600px] sm:text-[16px] md:max-w-2xl">
+        <p className="text-white font-[400] text-[14px] max-w-[90%] sm:max-w-[600px] sm:text-[16px] md:max-w-2xl 2xl:text-[19px] ">
           We build intelligent, high-performance platforms for brands ready to
           scale — fusing automation, design, and engineering into real business
           impact.
         </p>
-        
-            
+
         {/* ------------------------Buttons-------------------------------------- */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
-          <button className="w-full sm:w-auto py-2 px-6 bg-secondary cursor-pointer rounded-[37px] hover:bg-secondary/80 transition-colors text-[14px] sm:text-[14px] md:text-[14px]">
+          <button className="w-full sm:w-auto py-2 px-6 bg-secondary cursor-pointer rounded-[37px] hover:bg-secondary/80 transition-colors text-[14px] sm:text-[14px] md:text-[14px] 2xl:text-[16px]">
             Request Your Strategy Call
           </button>
-          <button className="w-full sm:w-auto py-[6px] px-6 cursor-pointer rounded-[37px] hover:bg-white/20 transition-colors border-white text-[14px] sm:text-[14px] md:text-[14px] border-[2px]">
+          <button className="w-full sm:w-auto py-[6px] px-6 cursor-pointer rounded-[37px] hover:bg-white/20 transition-colors border-white text-[14px] sm:text-[14px] md:text-[14px] border-[2px] 2xl:text-[16px]">
             View Our Work
           </button>
         </div>
-        <div className="w-[90%] p-[2px] bg-white/10 rounded-2xl border-[3px] border-[#797890] ">
-        <Dashboard />
-            </div>
+        <div className="max-w-[900px] p-[2px] bg-white/10 rounded-2xl border-[3px] border-[#797890] 2xl:max-w-[1100px]">
+          <Dashboard />
+        </div>
       </div>
-        
-
 
       {/* -----------------------------------Trusted Clients----------------------------------- */}
       <div className="flex flex-col gap-4 sm:gap-6 items-center justify-center px-4 sm:px-0">
-        <p className="text-white font-[400] text-[16px] sm:text-[18px] lg:max-w-3xl text-center">
+        <p className="text-white font-[400] text-[16px] sm:text-[18px] lg:max-w-3xl text-center 2xl:text-[18px]">
           Trusted by 30+ industries worldwide
         </p>
-            
-          
+
         {/* -------------------------Company LOGO----------------- */}
-        <div className="w-full flex items-center h-[70px] sm:h-[90px] relative overflow-hidden">
+        <div className="w-full flex items-center h-[70px] sm:h-[120px] relative overflow-hidden 2xl:h-[160px]">
           <Marquee speed={40} play={play}>
             {[...Trusted_Logs, ...Trusted_Logs].map((logo, index) => (
               <Image
                 key={index}
                 src={logo}
                 alt={`Trusted Logo ${index + 1}`}
-                width={80}
+                width={90}
                 height={50}
-                className="mx-6 sm:mx-12"
+                className="mx-6 sm:mx-12 2xl:w-[300px] 2xl:h-[80px] object-contain"
               />
             ))}
           </Marquee>

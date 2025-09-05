@@ -25,12 +25,11 @@ const ClientFavorite = () => {
           Smart Growth Packages Built to Launch, Scale, & Win in{" "}
           <span className="relative inline-block">
             Competitive Markets
-            <span className="absolute left-0 -bottom-1 md:-bottom-4">
+            <span className="absolute left-0 -bottom-1 md:-bottom-[30px]">
               <AnimatedUnderline
-                color="#412BE0"
-                width={280}
-                height={16}
-                className="md:!w-[420px] md:!h-[20px]"
+                  width={360}
+                  color="#412BE0"
+                  className="hidden md:block"
               />
             </span>
           </span>

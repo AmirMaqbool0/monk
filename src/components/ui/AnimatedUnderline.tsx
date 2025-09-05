@@ -2,76 +2,75 @@ import React from "react";
 
 interface AnimatedUnderlineProps {
   className?: string;
-  color?: string;
-  width?: number;
-  height?: number;
+  color?: string;          // if provided → solid stroke
+  width?: number;          // actual pixel width
   style?: React.CSSProperties;
 }
 
 const AnimatedUnderline: React.FC<AnimatedUnderlineProps> = ({
   className = "",
-  color = "#3A9AEE",
-  width = 220,
-  height = 20,
+  color,
+  width = 559,
   style = {},
 }) => {
-  const w = width ?? 220;
-  const h = height ?? 20;
+  // maintain aspect ratio of original 559x85
+  const ratio = 85 / 559;
+  const w = width ?? 559;
+  const h = w * ratio;
 
-  // Curve points
-  const startX = 10;
-  const endX = w - 10;
-  const controlX = w / 2;
-  const midY = h / 2;
-  const downY = h - 5;
-  const upY = 0;
-
-  // For see-saw: animate left and right Y independently
-  // 1. Left up, right down
-  // 2. Flat
-  // 3. Left down, right up
-  // 4. Flat
-  // 5. Repeat
+  const useSolidColor = Boolean(color); // decide stroke mode
+  const strokeValue = useSolidColor ? color! : "url(#underlineGradient)";
 
   return (
     <svg
       className={className}
       width={w}
       height={h}
-      viewBox={`0 0 ${w} ${h}`}
+      viewBox="0 0 559 85"
       fill="none"
+      xmlns="http://www.w3.org/2000/svg"
       style={style}
+      preserveAspectRatio="xMidYMid meet"
     >
+      {/* Only define gradient if needed */}
+      {!useSolidColor && (
+        <defs>
+          <linearGradient id="underlineGradient" x1="0" y1="42" x2="559" y2="42" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#3AEFFF" />
+            <stop offset="50%" stopColor="#412BE0" />
+            <stop offset="100%" stopColor="#06B6D4" />
+          </linearGradient>
+        </defs>
+      )}
+
       <defs>
-        <linearGradient id="glow" x1="0" y1={h / 2} x2={w} y2={h / 2} gradientUnits="userSpaceOnUse">
-          <stop stopColor={color} stopOpacity="0.7" />
-          <stop offset="1" stopColor={color} stopOpacity="1" />
-        </linearGradient>
         <filter id="glowFilter" x="-20%" y="-50%" width="140%" height="200%">
-          <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+          <feGaussianBlur stdDeviation="6" result="blur" />
           <feMerge>
-            <feMergeNode in="coloredBlur"/>
-            <feMergeNode in="SourceGraphic"/>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
       </defs>
+
       <path
-        d={`M${startX} ${downY} Q ${controlX} ${midY}, ${endX} ${upY}`}
-        stroke="url(#glow)"
-        strokeWidth="6"
+        d="M38 43C123.456 36.2084 339.694 26.7001 521 43"
+        stroke={strokeValue}
+        strokeWidth="7"
         strokeLinecap="round"
-        fill="none"
+        strokeLinejoin="round"
         filter="url(#glowFilter)"
       >
         <animate
           attributeName="d"
-          values={`
-            M${startX} ${upY} Q ${controlX} ${midY}, ${endX} ${downY};
-            M${startX} ${downY} Q ${controlX} ${midY}, ${endX} ${upY};
-            M${startX} ${upY} Q ${controlX} ${midY}, ${endX} ${downY}
-          `}
-          dur="12s"
+          dur="6s"
           repeatCount="indefinite"
+          values={`
+            M38 43C123.456 36.2 339.694 26.7 521 43;
+            M38 40C123.456 34.0 339.694 24.5 521 40;
+            M38 46C123.456 38.5 339.694 28.9 521 46;
+            M38 43C123.456 36.2 339.694 26.7 521 43
+          `}
         />
       </path>
     </svg>

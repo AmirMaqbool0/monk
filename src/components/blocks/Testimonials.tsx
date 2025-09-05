@@ -45,7 +45,9 @@ const Testimonials = () => {
           <span className="relative inline-block">
             Results.
             <span className="absolute left-0 -bottom-2">
-              <AnimatedUnderline width={140} height={20} color="#412BE0"  />
+              <AnimatedUnderline    width={160}
+                  color="#412BE0"
+                  className="hidden md:block"  />
             </span>
           </span>
         </h2>

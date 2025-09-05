@@ -34,7 +34,11 @@
 }
 
 .card {
-  @apply rounded-2xl bg-white/85 border border-black/5 shadow-soft;
+  @apply rounded-2xl bg-white/85 border border-black/5 ;
+  transition: all 0.3s;
+}
+.card:hover {
+  @apply shadow-[0px_4px_40px_4px_#412BE012];
 }
 
 .card-muted {
@@ -72,7 +76,7 @@
 
 /* White shell (outer frame) */
 .shell {
-  @apply bg-white rounded-[28px] border border-slate-200/70 shadow-[0_18px_50px_rgba(2,6,23,0.12)];
+  @apply bg-[#F9F9F9] rounded-[28px] border border-slate-200/70 shadow-[0_18px_50px_rgba(2,6,23,0.12)];
 }
 
 /* Cards (inner blocks) */
@@ -212,7 +216,7 @@
 
    /* Card table surface */
   .table-surface {
-    @apply overflow-hidden rounded-2xl border border-slate-200 bg-white;
+    @apply overflow-hidden rounded-2xl  bg-white;
   }
   /* Hairline bottom on thead */
   .thead-soft {
@@ -258,38 +262,49 @@
 
 
   .kpi-card {
-    @apply rounded-[20px] border border-slate-100 bg-white/95 px-5 py-4 h-[124px] flex items-center gap-4 min-w-0;
-    box-shadow:
-      0 1px 2px rgba(16,24,40,0.06),
-      0 18px 40px -18px rgba(99,102,241,0.35);
+    @apply rounded-[20px] border border-slate-100 bg-white/95 px-5 py-4 h-[124px]   flex items-center justify-between  min-w-0;
+    transition: all 0.3s;
+   
     background-image:
       radial-gradient(160px 120px at -10% -10%, rgba(99,102,241,0.06), transparent 60%),
       radial-gradient(160px 120px at 110% 120%, rgba(90,230,255,0.06), transparent 60%);
     backdrop-filter: saturate(1.1);
   }
+  .kpi-card:hover {
+    @apply shadow-[0px_4px_40px_4px_#412BE012];
 
-  .kpi-label { @apply text-[12px] leading-none text-slate-600; }
-  .kpi-hint  { @apply text-[12px] leading-none text-slate-400 mt-1; }
+  }
+
+  .kpi-label { @apply text-[12px] leading-none text-black text-[18px] font-[400] }
+  .kpi-hint  { @apply text-[12px] leading-none text-[#C2C2C2] mt-1; font-size: 16px; font-weight: 400; }
 
   .kpi-value {
-    font-size: clamp(18px, 2.2vw, 22px);
+    font-size: clamp(30px, 2.2vw, 22px);
     line-height: 1.1;
     font-weight: 700;
-    background: linear-gradient(90deg, #1F6FFF 0%, #8B5CF6 100%);
+    background: linear-gradient(180deg, #3F47E3 0%, #0873FB 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .kpi-orb {
-    @apply relative grid place-content-center rounded-full border border-slate-200 shadow-sm;
-    background: radial-gradient(120% 120% at 30% 20%, #f0f7ff 0%, #eef2ff 50%, #ffffff 100%);
+    @apply relative  grid place-content-center rounded-full border border-slate-200 shadow-sm;
+   
   }
   .kpi-orb::after {
     content: "";
     @apply absolute inset-0 rounded-full;
-    background: conic-gradient(from 220deg, rgba(139,92,246,0.2), rgba(56,189,248,0.2), transparent 60%);
+    /* background: conic-gradient(from 220deg, rgba(139,92,246,0.2), rgba(56,189,248,0.2), transparent 60%); */
     mix-blend-mode: normal;
   }
 
   .kpi-grid { @apply grid grid-cols-1 md:grid-cols-3 gap-4; } /* responsive layout */
+
+  /* globals.css (or app/globals.css) */
+@media (min-width: 1300px) {
+  html {
+    /* 16px at 1300px → up to 20px by ~1920px */
+    font-size: clamp(16px, calc(0.645vw + 7.6px), 20px);
+  }
+}

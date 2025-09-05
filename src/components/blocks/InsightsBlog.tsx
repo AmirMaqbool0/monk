@@ -15,8 +15,10 @@ const InsightsBlog = () => {
           Ideas That Build Trust. Frameworks That{" "}
           <span className="relative inline-block">
             Drive Action.
-            <span className="absolute left-0 -bottom-1 sm:-bottom-2 origin-left scale-90 md:scale-100">
-              <AnimatedUnderline width={250} height={20} color="#412BE0" />
+            <span className="absolute left-0 -bottom-1 sm:-bottom-[20px] origin-left scale-90 md:scale-100">
+              <AnimatedUnderline    width={260}
+                  color="#412BE0"
+                  className="hidden md:block" />
             </span>
           </span>
         </h2>

@@ -9,7 +9,7 @@ export function KPIChip({
   hint,
   valueClass,
   className,
-  orbSize = 44,
+  orbSize = 80,
 }: {
   icon?: ReactNode;
   label: string;
@@ -20,19 +20,19 @@ export function KPIChip({
   orbSize?: number;
 }) {
   return (
-    <div className={cn("kpi-card", className)}>
-      <div className="flex-1 min-w-0">
+    <div className={cn("kpi-card ", className)}>
+      <div className=" min-w-0 flex flex-col gap-2 items-start">
         <div className="kpi-label">{label}</div>
         <div className={cn("kpi-value", valueClass)}>{value}</div>
         {hint && <div className="kpi-hint">{hint}</div>}
       </div>
 
       <div
-        className="kpi-orb"
+        className="kpi-orb bg-[linear-gradient(to_bottom,#ECECFC,#EBFAFE)]"
         style={{ width: orbSize, height: orbSize }}
         aria-hidden="true"
       >
-        <div className="relative z-[1] text-sky-500">
+        <div className="relative z-[1]  text-sky-500">
           {/* Icon color can be tuned per chip via valueClass or inline className */}
           {icon}
         </div>

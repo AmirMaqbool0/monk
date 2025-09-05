@@ -19,10 +19,9 @@ const CoreServices = () => {
             The Next Digital
             <span className="absolute left-0 -bottom-1 md:-bottom-5">
               <AnimatedUnderline
-                color="#412BE0"
-                width={200}
-                height={16}
-                className="md:!w-[300px] md:!h-[20px]"
+                  width={260}
+                  color="#412BE0"
+                  className="hidden md:block"
               />
             </span>
           </span>{" "}
